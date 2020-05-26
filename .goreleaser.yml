@@ -5,7 +5,8 @@ before:
   hooks:
     - go mod tidy
 builds:
-  - main: ./cmd/convertToKebab/main.go
+  - id: convertToKebab
+    main: ./cmd/convertToKebab/main.go
     binary: convertToKebab
     goos:
       - darwin
@@ -19,7 +20,8 @@ builds:
       - -X main.Revision={{.ShortCommit}}
     env:
       - CGO_ENABLED=0
-  - main: ./cmd/convertToLowerCamel/main.go
+  - id: convertToLowerCamel
+    main: ./cmd/convertToLowerCamel/main.go
     binary: convertToLowerCamel
     goos:
       - darwin
@@ -33,7 +35,8 @@ builds:
       - -X main.Revision={{.ShortCommit}}
     env:
       - CGO_ENABLED=0
-  - main: ./cmd/convertToSnake/main.go
+  - id: convertToSnake
+    main: ./cmd/convertToSnake/main.go
     binary: convertToSnake
     goos:
       - darwin
@@ -47,7 +50,8 @@ builds:
       - -X main.Revision={{.ShortCommit}}
     env:
       - CGO_ENABLED=0
-  - main: ./cmd/convertToUpperCamel/main.go
+  - id: convertToUpperCamel
+    main: ./cmd/convertToUpperCamel/main.go
     binary: convertToUpperCamel
     goos:
       - darwin
