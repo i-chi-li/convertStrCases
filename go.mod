@@ -1,4 +1,4 @@
-module convertSnakeToCamel
+module github.com/i-chi-li/convertStrCases
 
 go 1.14
 
